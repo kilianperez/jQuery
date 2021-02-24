@@ -1,0 +1,51 @@
+@import "reset/variables", "reset/reset", "reset/mixins", "reset/keyframes";
+
+.tabs{
+    width:90%;
+    
+    margin: 2em auto;
+    border-radius:1em;
+    padding:2em;
+
+    background-color: #ececec;
+    box-shadow: 
+        10px 10px 20px 0px #c9c9c9,
+        -10px -10px 20px 0px #ffffff;
+}
+.tabs__ul{
+    @include flexible( row , nowrap , space-between , center , initial );
+}
+.tabs__li{
+    width: calc( 90% / 3 );
+    text-align: center;
+    
+    padding:1em 0;
+    border-radius: 1em;
+
+    background-color: #ececec;
+    box-shadow: 
+        10px 10px 20px 0px #c9c9c9,
+        -10px -10px 20px 0px #ffffff;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.tabs__li.ver{
+    background-color: #393939;
+    color:white
+}
+.tabs__contenedor{
+    width:100%;
+    min-height: 200px;
+    
+    margin:1em 0 0;
+    position: relative;
+}
+.tabs__contenido{
+    position: absolute;
+    top:0;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.tabs__contenido.ver{
+    opacity: 1;
+}
